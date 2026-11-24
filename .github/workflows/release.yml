@@ -1,0 +1,114 @@
+name: release
+on:
+  workflow_dispatch:
+    inputs:
+      promote_production:
+        description: Promote the exact preview image to production after preview smoke passes
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: dns-lab-release
+  cancel-in-progress: false
+jobs:
+  checks:
+    uses: ./.github/workflows/test.yml
+  build_preview:
+    needs: checks
+    environment: preview
+    runs-on: ubuntu-latest
+    outputs:
+      image_uri: ${{ steps.image.outputs.image_uri }}
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with: {go-version-file: go.mod}
+      - run: go test -race ./...
+        env: {LAB_REQUIRE_NETWORK_TEST: '1'}
+      - uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_PREVIEW_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Build and push preview image
+        id: image
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo=$(sh deploy/registry.sh preview)
+          registry=${repo%/*}
+          aws ecr get-login-password --region "$AWS_REGION" | docker login --username AWS --password-stdin "$registry"
+          docker build --platform linux/amd64 -t "$repo:$GITHUB_SHA" .
+          docker push "$repo:$GITHUB_SHA"
+          digest=$(aws ecr describe-images --region "$AWS_REGION" --repository-name dns-failure-lab-preview --image-ids "imageTag=$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
+          echo "image_uri=$repo@$digest" >> "$GITHUB_OUTPUT"
+  deploy_preview:
+    needs: build_preview
+    environment: preview
+    runs-on: [self-hosted, linux, dns-lab-deploy]
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      IMAGE_URI: ${{ needs.build_preview.outputs.image_uri }}
+      OPERATOR_CIDR: ${{ vars.PREVIEW_OPERATOR_CIDR }}
+      HOSTED_ZONE_ID: ${{ vars.DNS_HOSTED_ZONE_ID }}
+      HOSTNAME: ${{ vars.PREVIEW_HOSTNAME }}
+      CERTIFICATE_ARN: ${{ vars.PREVIEW_CERTIFICATE_ARN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_PREVIEW_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Deploy and smoke preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          url=$(sh deploy/app.sh preview)
+          sh deploy/smoke.sh "$url"
+          python3 scripts/benchmark.py run --url "$url" --samples 4 --concurrency 2 --output benchmark-run.json
+          python3 scripts/benchmark.py report benchmark-run.json --output benchmark-report.json
+          python3 -c 'import json; r=json.load(open("benchmark-report.json")); assert r["precision"] == 1 and r["recall"] == 1, r; assert r["diagnosis"]["accuracy"] == 1 and r["diagnosis"]["citation_coverage"] == 1, r; assert r["recovery_time_ms"]["measured_stages"] >= 1, r; assert r["detection_time_ms"]["measured_stages"] >= 1, r'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: preview-benchmark
+          path: |
+            benchmark-run.json
+            benchmark-labels.json
+            benchmark-report.json
+          if-no-files-found: ignore
+  promote_production:
+    if: ${{ inputs.promote_production }}
+    needs: [build_preview, deploy_preview]
+    environment: production
+    runs-on: [self-hosted, linux, dns-lab-deploy]
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      OPERATOR_CIDR: ${{ vars.PRODUCTION_OPERATOR_CIDR }}
+      HOSTED_ZONE_ID: ${{ vars.DNS_HOSTED_ZONE_ID }}
+      HOSTNAME: ${{ vars.PRODUCTION_HOSTNAME }}
+      CERTIFICATE_ARN: ${{ vars.PRODUCTION_CERTIFICATE_ARN }}
+      PREVIEW_IMAGE_URI: ${{ needs.build_preview.outputs.image_uri }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_PRODUCTION_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Promote exact image and deploy production
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo=$(sh deploy/registry.sh production)
+          registry=${repo%/*}
+          aws ecr get-login-password --region "$AWS_REGION" | docker login --username AWS --password-stdin "$registry"
+          docker pull "$PREVIEW_IMAGE_URI"
+          docker tag "$PREVIEW_IMAGE_URI" "$repo:$GITHUB_SHA"
+          docker push "$repo:$GITHUB_SHA"
+          digest=$(aws ecr describe-images --region "$AWS_REGION" --repository-name dns-failure-lab-production --image-ids "imageTag=$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
+          export IMAGE_URI="$repo@$digest"
+          url=$(sh deploy/app.sh production)
+          sh deploy/smoke.sh "$url"

@@ -1,0 +1,41 @@
+name: rollback
+on:
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: Environment to roll back
+        type: choice
+        options: [preview, production]
+        required: true
+      digest:
+        description: 64-character SHA256 digest of a known-good image in that environment's ECR repository
+        type: string
+        required: true
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: dns-lab-release
+  cancel-in-progress: false
+jobs:
+  rollback:
+    environment: ${{ inputs.stage }}
+    runs-on: [self-hosted, linux, dns-lab-deploy]
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      OPERATOR_CIDR: ${{ inputs.stage == 'production' && vars.PRODUCTION_OPERATOR_CIDR || vars.PREVIEW_OPERATOR_CIDR }}
+      HOSTED_ZONE_ID: ${{ vars.DNS_HOSTED_ZONE_ID }}
+      HOSTNAME: ${{ inputs.stage == 'production' && vars.PRODUCTION_HOSTNAME || vars.PREVIEW_HOSTNAME }}
+      CERTIFICATE_ARN: ${{ inputs.stage == 'production' && vars.PRODUCTION_CERTIFICATE_ARN || vars.PREVIEW_CERTIFICATE_ARN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          role-to-assume: ${{ inputs.stage == 'production' && vars.AWS_PRODUCTION_ROLE_ARN || vars.AWS_PREVIEW_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Restore known-good image and smoke
+        shell: bash
+        env:
+          DIGEST: ${{ inputs.digest }}
+          STAGE: ${{ inputs.stage }}
+        run: sh deploy/rollback.sh "$STAGE" "$DIGEST"

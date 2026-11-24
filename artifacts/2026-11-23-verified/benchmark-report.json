@@ -1,0 +1,247 @@
+{
+  "completed_all_stages": true,
+  "configuration": {
+    "base_url": "http://127.0.0.1:8080",
+    "max_concurrency": 4,
+    "request_timeout_seconds": 10.0,
+    "samples_per_stage": 8
+  },
+  "confusion_matrix": {
+    "false_negative": 0,
+    "false_positive": 0,
+    "true_negative": 16,
+    "true_positive": 40
+  },
+  "detection_time_ms": {
+    "maximum": 733.404,
+    "measured_stages": 5,
+    "median": 39.214
+  },
+  "diagnosis": {
+    "accuracy": 1.0,
+    "citation_coverage": 1.0,
+    "confusion_matrix": {
+      "bad_release": {
+        "bad_release": 8
+      },
+      "healthy": {
+        "healthy": 16
+      },
+      "slow": {
+        "slow": 8
+      },
+      "stale_answer": {
+        "stale_answer": 8
+      },
+      "timeout": {
+        "timeout": 8
+      },
+      "wrong_answer": {
+        "wrong_answer": 8
+      }
+    },
+    "correct": 56,
+    "incorrect": 0,
+    "misclassified_events": [],
+    "uncited_events": 0
+  },
+  "excluded_client_errors": 0,
+  "false_positive_rate": 0.0,
+  "impact": "Synthetic probes only; real-user impact was not measured.",
+  "kind": "synthetic_dns_benchmark_report",
+  "precision": 1.0,
+  "recall": 1.0,
+  "recovery_time_ms": {
+    "maximum": 47.99,
+    "measured_stages": 1,
+    "median": 47.99
+  },
+  "schema_version": 2,
+  "source_run_id": "98b5f7623bde4af596452cbf992229c0",
+  "source_started_at": "2026-11-24T04:03:25.541+00:00",
+  "source_status": "complete",
+  "stages": [
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000005",
+        "probe-000003",
+        "probe-000004",
+        "probe-000002",
+        "probe-000009",
+        "probe-000007",
+        "probe-000006",
+        "probe-000008"
+      ],
+      "expected_alert": false,
+      "first_detection_ms": null,
+      "first_recovery_ms": null,
+      "index": 0,
+      "observed_outcomes": {
+        "ok": 8
+      },
+      "phase": "baseline",
+      "scenario": "healthy"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000012",
+        "probe-000013",
+        "probe-000011",
+        "probe-000010",
+        "probe-000015",
+        "probe-000017",
+        "probe-000016",
+        "probe-000014"
+      ],
+      "expected_alert": true,
+      "first_detection_ms": 387.022,
+      "first_recovery_ms": null,
+      "index": 1,
+      "observed_outcomes": {
+        "slow": 8
+      },
+      "phase": "fault",
+      "scenario": "slow"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000018",
+        "probe-000020",
+        "probe-000021",
+        "probe-000019",
+        "probe-000023",
+        "probe-000022",
+        "probe-000024",
+        "probe-000025"
+      ],
+      "expected_alert": true,
+      "first_detection_ms": 733.404,
+      "first_recovery_ms": null,
+      "index": 2,
+      "observed_outcomes": {
+        "dns_timeout": 8
+      },
+      "phase": "fault",
+      "scenario": "timeout"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000028",
+        "probe-000030",
+        "probe-000027",
+        "probe-000029",
+        "probe-000031",
+        "probe-000033",
+        "probe-000032",
+        "probe-000034"
+      ],
+      "expected_alert": true,
+      "first_detection_ms": 39.214,
+      "first_recovery_ms": null,
+      "index": 3,
+      "observed_outcomes": {
+        "connection_failed": 8
+      },
+      "phase": "fault",
+      "scenario": "wrong_answer"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000038",
+        "probe-000035",
+        "probe-000037",
+        "probe-000036",
+        "probe-000039",
+        "probe-000042",
+        "probe-000041",
+        "probe-000040"
+      ],
+      "expected_alert": true,
+      "first_detection_ms": 23.286,
+      "first_recovery_ms": null,
+      "index": 4,
+      "observed_outcomes": {
+        "connection_failed": 8
+      },
+      "phase": "fault",
+      "scenario": "stale_answer"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000044",
+        "probe-000046",
+        "probe-000045",
+        "probe-000043",
+        "probe-000050",
+        "probe-000048",
+        "probe-000047",
+        "probe-000049"
+      ],
+      "expected_alert": true,
+      "first_detection_ms": 37.762,
+      "first_recovery_ms": null,
+      "index": 5,
+      "observed_outcomes": {
+        "dns_error": 8
+      },
+      "phase": "fault",
+      "scenario": "bad_release"
+    },
+    {
+      "diagnosis": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "incorrect": 0
+      },
+      "evidence_event_ids": [
+        "probe-000051",
+        "probe-000053",
+        "probe-000052",
+        "probe-000054",
+        "probe-000055",
+        "probe-000057",
+        "probe-000056",
+        "probe-000058"
+      ],
+      "expected_alert": false,
+      "first_detection_ms": null,
+      "first_recovery_ms": 47.99,
+      "index": 6,
+      "observed_outcomes": {
+        "ok": 8
+      },
+      "phase": "recovery",
+      "scenario": "healthy"
+    }
+  ]
+}

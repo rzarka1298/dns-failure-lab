@@ -1,0 +1,1 @@
+{"id":"probe-000003","trace_id":"probe-000003","at":"2026-11-24T03:37:40.058529505Z","scenario":"healthy","release":"v1","target":"api.lab.test","outcome":"ok","total_ms":2,"spans":[{"name":"dns.resolve","duration_ms":1,"outcome":"ok","detail":"172.21.0.2"},{"name":"http.upstream","duration_ms":1,"outcome":"ok","detail":"HTTP 200"}]}

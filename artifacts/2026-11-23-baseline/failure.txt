@@ -1,0 +1,3 @@
+Command: python3 scripts/benchmark.py run --url http://127.0.0.1:8080 --samples 8 --concurrency 4 --output artifacts/2026-11-23-baseline/benchmark-run.json
+Result: exit 1, benchmark: HTTP Error 503: Service Unavailable
+Observation: following timeout stage, wrong_answer probes repeatedly returned dns_timeout; stale_answer scenario application returned 503. See failure-state.json and failure-compose.log.

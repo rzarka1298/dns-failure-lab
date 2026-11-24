@@ -1,0 +1,52 @@
+services:
+  upstream:
+    build: .
+    environment:
+      LAB_ROLE: upstream
+      LAB_UPSTREAM_ADDR: ":8081"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8081/healthz"]
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+  dns:
+    build: .
+    depends_on:
+      upstream:
+        condition: service_healthy
+    environment:
+      LAB_ROLE: dns
+      LAB_UPSTREAM_HOST: upstream
+      LAB_DNS_LISTEN: ":5353"
+      LAB_DNS_ADMIN_ADDR: ":8091"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8091/healthz"]
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+  lab:
+    build: .
+    depends_on:
+      dns:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      LAB_ROLE: workbench
+      LAB_ADDR: ":8080"
+      LAB_DNS_ADDR: "dns:5353"
+      LAB_DNS_ADMIN_URL: "http://dns:8091"
+      LAB_UPSTREAM_PORT: "8081"
+      LAB_INCIDENT_DIR: "/var/lib/dns-lab/incidents"
+    volumes:
+      - incident_data:/var/lib/dns-lab
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 2s
+      timeout: 2s
+      retries: 10
+
+volumes:
+  incident_data:

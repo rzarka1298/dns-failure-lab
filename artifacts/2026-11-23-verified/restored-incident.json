@@ -1,0 +1,52 @@
+{
+  "id": "inc-5325dfda9f529176626c436d19e8110c",
+  "status": "approved",
+  "summary": "Probe probe-000010 spent 358 ms resolving DNS before the upstream responded successfully.",
+  "impact": "Synthetic probe affected; real-user impact is unknown and not measured.",
+  "evidence": [
+    "probe-000010"
+  ],
+  "evidence_events": [
+    {
+      "id": "probe-000010",
+      "trace_id": "probe-000010",
+      "at": "2026-11-24T04:03:25.703290882Z",
+      "release": "v1",
+      "target": "api.lab.test",
+      "outcome": "slow",
+      "total_ms": 360,
+      "spans": [
+        {
+          "name": "dns.resolve",
+          "duration_ms": 358,
+          "outcome": "ok",
+          "detail": "172.21.0.2"
+        },
+        {
+          "name": "http.upstream",
+          "duration_ms": 1,
+          "outcome": "ok",
+          "detail": "HTTP 200"
+        }
+      ],
+      "diagnosis": {
+        "class": "slow",
+        "confidence": "high",
+        "summary": "Probe probe-000010 spent 358 ms resolving DNS before the upstream responded successfully.",
+        "evidence": [
+          "probe-000010"
+        ]
+      }
+    }
+  ],
+  "created_at": "2026-11-24T04:03:26.064050133Z",
+  "updated_at": "2026-11-24T04:04:07.293433971Z",
+  "reviews": [
+    {
+      "decision": "approve",
+      "reviewer": "lab verification",
+      "note": "Synthetic evidence checked during local persistence test.",
+      "at": "2026-11-24T04:04:07.293433971Z"
+    }
+  ]
+}

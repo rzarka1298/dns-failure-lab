@@ -1,0 +1,58 @@
+{
+  "kind": "synthetic_dns_hidden_labels",
+  "run_id": "98b5f7623bde4af596452cbf992229c0",
+  "scenario_order": [
+    "healthy",
+    "slow",
+    "timeout",
+    "wrong_answer",
+    "stale_answer",
+    "bad_release",
+    "healthy"
+  ],
+  "schema_version": 2,
+  "stage_labels": [
+    {
+      "expected_alert": false,
+      "index": 0,
+      "phase": "baseline",
+      "scenario": "healthy"
+    },
+    {
+      "expected_alert": true,
+      "index": 1,
+      "phase": "fault",
+      "scenario": "slow"
+    },
+    {
+      "expected_alert": true,
+      "index": 2,
+      "phase": "fault",
+      "scenario": "timeout"
+    },
+    {
+      "expected_alert": true,
+      "index": 3,
+      "phase": "fault",
+      "scenario": "wrong_answer"
+    },
+    {
+      "expected_alert": true,
+      "index": 4,
+      "phase": "fault",
+      "scenario": "stale_answer"
+    },
+    {
+      "expected_alert": true,
+      "index": 5,
+      "phase": "fault",
+      "scenario": "bad_release"
+    },
+    {
+      "expected_alert": false,
+      "index": 6,
+      "phase": "recovery",
+      "scenario": "healthy"
+    }
+  ]
+}

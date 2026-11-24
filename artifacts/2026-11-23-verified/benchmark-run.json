@@ -1,0 +1,2042 @@
+{
+  "completed_at": "2026-11-24T04:03:28.607+00:00",
+  "configuration": {
+    "base_url": "http://127.0.0.1:8080",
+    "max_concurrency": 4,
+    "request_timeout_seconds": 10.0,
+    "samples_per_stage": 8
+  },
+  "errors": [],
+  "kind": "synthetic_dns_observations",
+  "run_id": "98b5f7623bde4af596452cbf992229c0",
+  "schema_version": 2,
+  "stages": [
+    {
+      "applied_at": "2026-11-24T04:03:25.604+00:00",
+      "completed_at": "2026-11-24T04:03:25.661+00:00",
+      "index": 0,
+      "samples": [
+        {
+          "elapsed_ms": 28.706,
+          "event": {
+            "at": "2026-11-24T04:03:25.606662174Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000005"
+              ],
+              "summary": "Probe probe-000005 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000005",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 5,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 7,
+            "trace_id": "probe-000005"
+          },
+          "observed_at": "2026-11-24T04:03:25.633+00:00",
+          "started_at": "2026-11-24T04:03:25.605+00:00"
+        },
+        {
+          "elapsed_ms": 29.617,
+          "event": {
+            "at": "2026-11-24T04:03:25.606311424Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000003"
+              ],
+              "summary": "Probe probe-000003 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000003",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 6,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 7,
+            "trace_id": "probe-000003"
+          },
+          "observed_at": "2026-11-24T04:03:25.634+00:00",
+          "started_at": "2026-11-24T04:03:25.606+00:00"
+        },
+        {
+          "elapsed_ms": 30.148,
+          "event": {
+            "at": "2026-11-24T04:03:25.606599132Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000004"
+              ],
+              "summary": "Probe probe-000004 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000004",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 6,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 2,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 9,
+            "trace_id": "probe-000004"
+          },
+          "observed_at": "2026-11-24T04:03:25.634+00:00",
+          "started_at": "2026-11-24T04:03:25.605+00:00"
+        },
+        {
+          "elapsed_ms": 31.108,
+          "event": {
+            "at": "2026-11-24T04:03:25.605898424Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000002"
+              ],
+              "summary": "Probe probe-000002 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000002",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 6,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 8,
+            "trace_id": "probe-000002"
+          },
+          "observed_at": "2026-11-24T04:03:25.635+00:00",
+          "started_at": "2026-11-24T04:03:25.605+00:00"
+        },
+        {
+          "elapsed_ms": 52.525,
+          "event": {
+            "at": "2026-11-24T04:03:25.632363632Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000009"
+              ],
+              "summary": "Probe probe-000009 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000009",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 2,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 4,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 6,
+            "trace_id": "probe-000009"
+          },
+          "observed_at": "2026-11-24T04:03:25.656+00:00",
+          "started_at": "2026-11-24T04:03:25.634+00:00"
+        },
+        {
+          "elapsed_ms": 53.399,
+          "event": {
+            "at": "2026-11-24T04:03:25.630860882Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000007"
+              ],
+              "summary": "Probe probe-000007 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000007",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 3,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 3,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 7,
+            "trace_id": "probe-000007"
+          },
+          "observed_at": "2026-11-24T04:03:25.657+00:00",
+          "started_at": "2026-11-24T04:03:25.635+00:00"
+        },
+        {
+          "elapsed_ms": 53.806,
+          "event": {
+            "at": "2026-11-24T04:03:25.630819382Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000006"
+              ],
+              "summary": "Probe probe-000006 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000006",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 4,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 3,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 7,
+            "trace_id": "probe-000006"
+          },
+          "observed_at": "2026-11-24T04:03:25.658+00:00",
+          "started_at": "2026-11-24T04:03:25.633+00:00"
+        },
+        {
+          "elapsed_ms": 55.991,
+          "event": {
+            "at": "2026-11-24T04:03:25.630911841Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000008"
+              ],
+              "summary": "Probe probe-000008 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000008",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 4,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 7,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 12,
+            "trace_id": "probe-000008"
+          },
+          "observed_at": "2026-11-24T04:03:25.660+00:00",
+          "started_at": "2026-11-24T04:03:25.634+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:25.695+00:00",
+      "completed_at": "2026-11-24T04:03:26.492+00:00",
+      "index": 1,
+      "samples": [
+        {
+          "elapsed_ms": 387.022,
+          "event": {
+            "at": "2026-11-24T04:03:25.703291132Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000012"
+              ],
+              "summary": "Probe probe-000012 spent 359 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000012",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 359,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 2,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 361,
+            "trace_id": "probe-000012"
+          },
+          "observed_at": "2026-11-24T04:03:26.082+00:00",
+          "started_at": "2026-11-24T04:03:25.696+00:00"
+        },
+        {
+          "elapsed_ms": 387.428,
+          "event": {
+            "at": "2026-11-24T04:03:25.703354299Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000013"
+              ],
+              "summary": "Probe probe-000013 spent 358 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000013",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 358,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 3,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 362,
+            "trace_id": "probe-000013"
+          },
+          "observed_at": "2026-11-24T04:03:26.082+00:00",
+          "started_at": "2026-11-24T04:03:25.697+00:00"
+        },
+        {
+          "elapsed_ms": 394.34,
+          "event": {
+            "at": "2026-11-24T04:03:25.703291091Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000011"
+              ],
+              "summary": "Probe probe-000011 spent 361 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000011",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 361,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 4,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 366,
+            "trace_id": "probe-000011"
+          },
+          "observed_at": "2026-11-24T04:03:26.089+00:00",
+          "started_at": "2026-11-24T04:03:25.696+00:00"
+        },
+        {
+          "elapsed_ms": 429.925,
+          "event": {
+            "at": "2026-11-24T04:03:25.703290882Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000010"
+              ],
+              "summary": "Probe probe-000010 spent 358 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000010",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 358,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 360,
+            "trace_id": "probe-000010"
+          },
+          "observed_at": "2026-11-24T04:03:26.124+00:00",
+          "started_at": "2026-11-24T04:03:25.697+00:00"
+        },
+        {
+          "elapsed_ms": 771.683,
+          "event": {
+            "at": "2026-11-24T04:03:26.091046466Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000015"
+              ],
+              "summary": "Probe probe-000015 spent 355 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000015",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 355,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 356,
+            "trace_id": "probe-000015"
+          },
+          "observed_at": "2026-11-24T04:03:26.466+00:00",
+          "started_at": "2026-11-24T04:03:26.082+00:00"
+        },
+        {
+          "elapsed_ms": 793.415,
+          "event": {
+            "at": "2026-11-24T04:03:26.141148674Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000017"
+              ],
+              "summary": "Probe probe-000017 spent 304 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000017",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 304,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 306,
+            "trace_id": "probe-000017"
+          },
+          "observed_at": "2026-11-24T04:03:26.488+00:00",
+          "started_at": "2026-11-24T04:03:26.125+00:00"
+        },
+        {
+          "elapsed_ms": 794.885,
+          "event": {
+            "at": "2026-11-24T04:03:26.101001758Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000016"
+              ],
+              "summary": "Probe probe-000016 spent 346 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000016",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 346,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 347,
+            "trace_id": "probe-000016"
+          },
+          "observed_at": "2026-11-24T04:03:26.489+00:00",
+          "started_at": "2026-11-24T04:03:26.089+00:00"
+        },
+        {
+          "elapsed_ms": 795.657,
+          "event": {
+            "at": "2026-11-24T04:03:26.090866466Z",
+            "diagnosis": {
+              "class": "slow",
+              "confidence": "high",
+              "evidence": [
+                "probe-000014"
+              ],
+              "summary": "Probe probe-000014 spent 355 ms resolving DNS before the upstream responded successfully."
+            },
+            "id": "probe-000014",
+            "outcome": "slow",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 355,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 356,
+            "trace_id": "probe-000014"
+          },
+          "observed_at": "2026-11-24T04:03:26.490+00:00",
+          "started_at": "2026-11-24T04:03:26.082+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:26.531+00:00",
+      "completed_at": "2026-11-24T04:03:27.981+00:00",
+      "index": 2,
+      "samples": [
+        {
+          "elapsed_ms": 733.404,
+          "event": {
+            "at": "2026-11-24T04:03:26.540900508Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000018"
+              ],
+              "summary": "Probe probe-000018 timed out during DNS resolution after 702 ms."
+            },
+            "id": "probe-000018",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 702,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 702,
+            "trace_id": "probe-000018"
+          },
+          "observed_at": "2026-11-24T04:03:27.264+00:00",
+          "started_at": "2026-11-24T04:03:26.532+00:00"
+        },
+        {
+          "elapsed_ms": 734.059,
+          "event": {
+            "at": "2026-11-24T04:03:26.545996341Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000020"
+              ],
+              "summary": "Probe probe-000020 timed out during DNS resolution after 702 ms."
+            },
+            "id": "probe-000020",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 702,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 702,
+            "trace_id": "probe-000020"
+          },
+          "observed_at": "2026-11-24T04:03:27.265+00:00",
+          "started_at": "2026-11-24T04:03:26.533+00:00"
+        },
+        {
+          "elapsed_ms": 734.401,
+          "event": {
+            "at": "2026-11-24T04:03:26.546025883Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000021"
+              ],
+              "summary": "Probe probe-000021 timed out during DNS resolution after 701 ms."
+            },
+            "id": "probe-000021",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 701,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 701,
+            "trace_id": "probe-000021"
+          },
+          "observed_at": "2026-11-24T04:03:27.265+00:00",
+          "started_at": "2026-11-24T04:03:26.531+00:00"
+        },
+        {
+          "elapsed_ms": 734.753,
+          "event": {
+            "at": "2026-11-24T04:03:26.545913758Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000019"
+              ],
+              "summary": "Probe probe-000019 timed out during DNS resolution after 702 ms."
+            },
+            "id": "probe-000019",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 702,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 702,
+            "trace_id": "probe-000019"
+          },
+          "observed_at": "2026-11-24T04:03:27.266+00:00",
+          "started_at": "2026-11-24T04:03:26.533+00:00"
+        },
+        {
+          "elapsed_ms": 1449.557,
+          "event": {
+            "at": "2026-11-24T04:03:27.263990216Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000023"
+              ],
+              "summary": "Probe probe-000023 timed out during DNS resolution after 700 ms."
+            },
+            "id": "probe-000023",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 700,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 700,
+            "trace_id": "probe-000023"
+          },
+          "observed_at": "2026-11-24T04:03:27.981+00:00",
+          "started_at": "2026-11-24T04:03:27.265+00:00"
+        },
+        {
+          "elapsed_ms": 1449.807,
+          "event": {
+            "at": "2026-11-24T04:03:27.263985966Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000022"
+              ],
+              "summary": "Probe probe-000022 timed out during DNS resolution after 700 ms."
+            },
+            "id": "probe-000022",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 700,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 700,
+            "trace_id": "probe-000022"
+          },
+          "observed_at": "2026-11-24T04:03:27.981+00:00",
+          "started_at": "2026-11-24T04:03:27.265+00:00"
+        },
+        {
+          "elapsed_ms": 1450.073,
+          "event": {
+            "at": "2026-11-24T04:03:27.2640338Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000024"
+              ],
+              "summary": "Probe probe-000024 timed out during DNS resolution after 700 ms."
+            },
+            "id": "probe-000024",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 700,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 700,
+            "trace_id": "probe-000024"
+          },
+          "observed_at": "2026-11-24T04:03:27.981+00:00",
+          "started_at": "2026-11-24T04:03:27.266+00:00"
+        },
+        {
+          "elapsed_ms": 1450.134,
+          "event": {
+            "at": "2026-11-24T04:03:27.264861175Z",
+            "diagnosis": {
+              "class": "timeout",
+              "confidence": "high",
+              "evidence": [
+                "probe-000025"
+              ],
+              "summary": "Probe probe-000025 timed out during DNS resolution after 700 ms."
+            },
+            "id": "probe-000025",
+            "outcome": "dns_timeout",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "dns_timeout",
+                "duration_ms": 700,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 700,
+            "trace_id": "probe-000025"
+          },
+          "observed_at": "2026-11-24T04:03:27.981+00:00",
+          "started_at": "2026-11-24T04:03:27.265+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:28.203+00:00",
+      "completed_at": "2026-11-24T04:03:28.281+00:00",
+      "index": 3,
+      "samples": [
+        {
+          "elapsed_ms": 39.214,
+          "event": {
+            "at": "2026-11-24T04:03:28.208899967Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000028"
+              ],
+              "summary": "Probe probe-000028 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000028",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 13,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 15,
+            "trace_id": "probe-000028"
+          },
+          "observed_at": "2026-11-24T04:03:28.242+00:00",
+          "started_at": "2026-11-24T04:03:28.206+00:00"
+        },
+        {
+          "elapsed_ms": 40.819,
+          "event": {
+            "at": "2026-11-24T04:03:28.217687925Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000030"
+              ],
+              "summary": "Probe probe-000030 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000030",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 3,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 3,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 7,
+            "trace_id": "probe-000030"
+          },
+          "observed_at": "2026-11-24T04:03:28.244+00:00",
+          "started_at": "2026-11-24T04:03:28.207+00:00"
+        },
+        {
+          "elapsed_ms": 41.452,
+          "event": {
+            "at": "2026-11-24T04:03:28.208858259Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000027"
+              ],
+              "summary": "Probe probe-000027 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000027",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 13,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 2,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 15,
+            "trace_id": "probe-000027"
+          },
+          "observed_at": "2026-11-24T04:03:28.244+00:00",
+          "started_at": "2026-11-24T04:03:28.204+00:00"
+        },
+        {
+          "elapsed_ms": 43.224,
+          "event": {
+            "at": "2026-11-24T04:03:28.217131384Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000029"
+              ],
+              "summary": "Probe probe-000029 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000029",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 6,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 6,
+            "trace_id": "probe-000029"
+          },
+          "observed_at": "2026-11-24T04:03:28.246+00:00",
+          "started_at": "2026-11-24T04:03:28.205+00:00"
+        },
+        {
+          "elapsed_ms": 60.692,
+          "event": {
+            "at": "2026-11-24T04:03:28.241523217Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000031"
+              ],
+              "summary": "Probe probe-000031 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000031",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 3,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 4,
+            "trace_id": "probe-000031"
+          },
+          "observed_at": "2026-11-24T04:03:28.264+00:00",
+          "started_at": "2026-11-24T04:03:28.242+00:00"
+        },
+        {
+          "elapsed_ms": 63.535,
+          "event": {
+            "at": "2026-11-24T04:03:28.247458759Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000033"
+              ],
+              "summary": "Probe probe-000033 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000033",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 2,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 2,
+            "trace_id": "probe-000033"
+          },
+          "observed_at": "2026-11-24T04:03:28.267+00:00",
+          "started_at": "2026-11-24T04:03:28.245+00:00"
+        },
+        {
+          "elapsed_ms": 64.196,
+          "event": {
+            "at": "2026-11-24T04:03:28.247136467Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000032"
+              ],
+              "summary": "Probe probe-000032 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000032",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 2,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 3,
+            "trace_id": "probe-000032"
+          },
+          "observed_at": "2026-11-24T04:03:28.267+00:00",
+          "started_at": "2026-11-24T04:03:28.246+00:00"
+        },
+        {
+          "elapsed_ms": 77.455,
+          "event": {
+            "at": "2026-11-24T04:03:28.2508703Z",
+            "diagnosis": {
+              "class": "wrong_answer",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000034"
+              ],
+              "summary": "Probe probe-000034 resolved api.lab.test to loopback address 127.0.0.2, then could not connect to the upstream; the DNS answer is suspect."
+            },
+            "id": "probe-000034",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 12,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 13,
+            "trace_id": "probe-000034"
+          },
+          "observed_at": "2026-11-24T04:03:28.280+00:00",
+          "started_at": "2026-11-24T04:03:28.244+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:28.314+00:00",
+      "completed_at": "2026-11-24T04:03:28.410+00:00",
+      "index": 4,
+      "samples": [
+        {
+          "elapsed_ms": 23.286,
+          "event": {
+            "at": "2026-11-24T04:03:28.315227009Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000038"
+              ],
+              "summary": "Probe probe-000038 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000038",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29983
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 3,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 4,
+            "trace_id": "probe-000038"
+          },
+          "observed_at": "2026-11-24T04:03:28.338+00:00",
+          "started_at": "2026-11-24T04:03:28.317+00:00"
+        },
+        {
+          "elapsed_ms": 24.461,
+          "event": {
+            "at": "2026-11-24T04:03:28.314686217Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000035"
+              ],
+              "summary": "Probe probe-000035 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000035",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29982
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 2,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 4,
+            "trace_id": "probe-000035"
+          },
+          "observed_at": "2026-11-24T04:03:28.339+00:00",
+          "started_at": "2026-11-24T04:03:28.317+00:00"
+        },
+        {
+          "elapsed_ms": 24.762,
+          "event": {
+            "at": "2026-11-24T04:03:28.315187467Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000037"
+              ],
+              "summary": "Probe probe-000037 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000037",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29983
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 3,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 4,
+            "trace_id": "probe-000037"
+          },
+          "observed_at": "2026-11-24T04:03:28.339+00:00",
+          "started_at": "2026-11-24T04:03:28.315+00:00"
+        },
+        {
+          "elapsed_ms": 25.448,
+          "event": {
+            "at": "2026-11-24T04:03:28.315007592Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000036"
+              ],
+              "summary": "Probe probe-000036 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000036",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29983
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 3,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 4,
+            "trace_id": "probe-000036"
+          },
+          "observed_at": "2026-11-24T04:03:28.340+00:00",
+          "started_at": "2026-11-24T04:03:28.316+00:00"
+        },
+        {
+          "elapsed_ms": 90.413,
+          "event": {
+            "at": "2026-11-24T04:03:28.3460243Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000039"
+              ],
+              "summary": "Probe probe-000039 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000039",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29952
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 13,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 1,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 15,
+            "trace_id": "probe-000039"
+          },
+          "observed_at": "2026-11-24T04:03:28.405+00:00",
+          "started_at": "2026-11-24T04:03:28.340+00:00"
+        },
+        {
+          "elapsed_ms": 94.082,
+          "event": {
+            "at": "2026-11-24T04:03:28.346276759Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000042"
+              ],
+              "summary": "Probe probe-000042 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000042",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29952
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 12,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 2,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 15,
+            "trace_id": "probe-000042"
+          },
+          "observed_at": "2026-11-24T04:03:28.409+00:00",
+          "started_at": "2026-11-24T04:03:28.338+00:00"
+        },
+        {
+          "elapsed_ms": 94.475,
+          "event": {
+            "at": "2026-11-24T04:03:28.346189134Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000041"
+              ],
+              "summary": "Probe probe-000041 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000041",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29952
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 14,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 14,
+            "trace_id": "probe-000041"
+          },
+          "observed_at": "2026-11-24T04:03:28.409+00:00",
+          "started_at": "2026-11-24T04:03:28.339+00:00"
+        },
+        {
+          "elapsed_ms": 95.211,
+          "event": {
+            "at": "2026-11-24T04:03:28.346116842Z",
+            "diagnosis": {
+              "class": "stale_answer",
+              "confidence": "high",
+              "evidence": [
+                "probe-000040"
+              ],
+              "summary": "Probe probe-000040 used cached DNS address 127.0.0.2 while the authoritative check returned 172.21.0.2; the cached answer may be stale."
+            },
+            "id": "probe-000040",
+            "outcome": "connection_failed",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "127.0.0.2",
+                "duration_ms": 0,
+                "name": "dns.resolve",
+                "outcome": "cache_hit",
+                "ttl_remaining_ms": 29952
+              },
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 13,
+                "name": "dns.authoritative_check",
+                "outcome": "mismatch"
+              },
+              {
+                "detail": "connection_failed",
+                "duration_ms": 0,
+                "name": "http.upstream",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 14,
+            "trace_id": "probe-000040"
+          },
+          "observed_at": "2026-11-24T04:03:28.410+00:00",
+          "started_at": "2026-11-24T04:03:28.339+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:28.438+00:00",
+      "completed_at": "2026-11-24T04:03:28.509+00:00",
+      "index": 5,
+      "samples": [
+        {
+          "elapsed_ms": 37.762,
+          "event": {
+            "at": "2026-11-24T04:03:28.437441259Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000044"
+              ],
+              "summary": "Probe probe-000044 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000044",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 10,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 10,
+            "trace_id": "probe-000044"
+          },
+          "observed_at": "2026-11-24T04:03:28.476+00:00",
+          "started_at": "2026-11-24T04:03:28.440+00:00"
+        },
+        {
+          "elapsed_ms": 38.961,
+          "event": {
+            "at": "2026-11-24T04:03:28.4375783Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000046"
+              ],
+              "summary": "Probe probe-000046 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000046",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 10,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 10,
+            "trace_id": "probe-000046"
+          },
+          "observed_at": "2026-11-24T04:03:28.477+00:00",
+          "started_at": "2026-11-24T04:03:28.441+00:00"
+        },
+        {
+          "elapsed_ms": 39.224,
+          "event": {
+            "at": "2026-11-24T04:03:28.437510592Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000045"
+              ],
+              "summary": "Probe probe-000045 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000045",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 11,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 11,
+            "trace_id": "probe-000045"
+          },
+          "observed_at": "2026-11-24T04:03:28.477+00:00",
+          "started_at": "2026-11-24T04:03:28.439+00:00"
+        },
+        {
+          "elapsed_ms": 39.67,
+          "event": {
+            "at": "2026-11-24T04:03:28.436298675Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000043"
+              ],
+              "summary": "Probe probe-000043 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000043",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 13,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 13,
+            "trace_id": "probe-000043"
+          },
+          "observed_at": "2026-11-24T04:03:28.478+00:00",
+          "started_at": "2026-11-24T04:03:28.438+00:00"
+        },
+        {
+          "elapsed_ms": 65.164,
+          "event": {
+            "at": "2026-11-24T04:03:28.484950925Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000050"
+              ],
+              "summary": "Probe probe-000050 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000050",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 2,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 2,
+            "trace_id": "probe-000050"
+          },
+          "observed_at": "2026-11-24T04:03:28.503+00:00",
+          "started_at": "2026-11-24T04:03:28.477+00:00"
+        },
+        {
+          "elapsed_ms": 65.332,
+          "event": {
+            "at": "2026-11-24T04:03:28.483415092Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000048"
+              ],
+              "summary": "Probe probe-000048 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000048",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 3,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 3,
+            "trace_id": "probe-000048"
+          },
+          "observed_at": "2026-11-24T04:03:28.503+00:00",
+          "started_at": "2026-11-24T04:03:28.478+00:00"
+        },
+        {
+          "elapsed_ms": 68.475,
+          "event": {
+            "at": "2026-11-24T04:03:28.478498384Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000047"
+              ],
+              "summary": "Probe probe-000047 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000047",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 8,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 8,
+            "trace_id": "probe-000047"
+          },
+          "observed_at": "2026-11-24T04:03:28.506+00:00",
+          "started_at": "2026-11-24T04:03:28.476+00:00"
+        },
+        {
+          "elapsed_ms": 70.677,
+          "event": {
+            "at": "2026-11-24T04:03:28.48344205Z",
+            "diagnosis": {
+              "class": "bad_release",
+              "confidence": "medium",
+              "evidence": [
+                "probe-000049"
+              ],
+              "summary": "Probe probe-000049 on release v2-bad queried unexpected name api.invalid.lab and DNS resolution failed; check the release configuration."
+            },
+            "id": "probe-000049",
+            "outcome": "dns_error",
+            "release": "v2-bad",
+            "spans": [
+              {
+                "detail": "dns_error",
+                "duration_ms": 3,
+                "name": "dns.resolve",
+                "outcome": "error"
+              }
+            ],
+            "target": "api.invalid.lab",
+            "total_ms": 3,
+            "trace_id": "probe-000049"
+          },
+          "observed_at": "2026-11-24T04:03:28.509+00:00",
+          "started_at": "2026-11-24T04:03:28.477+00:00"
+        }
+      ]
+    },
+    {
+      "applied_at": "2026-11-24T04:03:28.526+00:00",
+      "completed_at": "2026-11-24T04:03:28.607+00:00",
+      "index": 6,
+      "samples": [
+        {
+          "elapsed_ms": 47.99,
+          "event": {
+            "at": "2026-11-24T04:03:28.525700884Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000051"
+              ],
+              "summary": "Probe probe-000051 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000051",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 14,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 10,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 25,
+            "trace_id": "probe-000051"
+          },
+          "observed_at": "2026-11-24T04:03:28.574+00:00",
+          "started_at": "2026-11-24T04:03:28.527+00:00"
+        },
+        {
+          "elapsed_ms": 49.063,
+          "event": {
+            "at": "2026-11-24T04:03:28.525775134Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000053"
+              ],
+              "summary": "Probe probe-000053 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000053",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 14,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 9,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 23,
+            "trace_id": "probe-000053"
+          },
+          "observed_at": "2026-11-24T04:03:28.575+00:00",
+          "started_at": "2026-11-24T04:03:28.527+00:00"
+        },
+        {
+          "elapsed_ms": 49.397,
+          "event": {
+            "at": "2026-11-24T04:03:28.525707675Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000052"
+              ],
+              "summary": "Probe probe-000052 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000052",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 12,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 15,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 28,
+            "trace_id": "probe-000052"
+          },
+          "observed_at": "2026-11-24T04:03:28.575+00:00",
+          "started_at": "2026-11-24T04:03:28.526+00:00"
+        },
+        {
+          "elapsed_ms": 49.848,
+          "event": {
+            "at": "2026-11-24T04:03:28.526016634Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000054"
+              ],
+              "summary": "Probe probe-000054 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000054",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 12,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 12,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 25,
+            "trace_id": "probe-000054"
+          },
+          "observed_at": "2026-11-24T04:03:28.576+00:00",
+          "started_at": "2026-11-24T04:03:28.527+00:00"
+        },
+        {
+          "elapsed_ms": 68.386,
+          "event": {
+            "at": "2026-11-24T04:03:28.571445509Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000055"
+              ],
+              "summary": "Probe probe-000055 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000055",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 4,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 2,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 6,
+            "trace_id": "probe-000055"
+          },
+          "observed_at": "2026-11-24T04:03:28.594+00:00",
+          "started_at": "2026-11-24T04:03:28.575+00:00"
+        },
+        {
+          "elapsed_ms": 74.286,
+          "event": {
+            "at": "2026-11-24T04:03:28.571827592Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000057"
+              ],
+              "summary": "Probe probe-000057 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000057",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 4,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 8,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 12,
+            "trace_id": "probe-000057"
+          },
+          "observed_at": "2026-11-24T04:03:28.600+00:00",
+          "started_at": "2026-11-24T04:03:28.574+00:00"
+        },
+        {
+          "elapsed_ms": 74.63,
+          "event": {
+            "at": "2026-11-24T04:03:28.571565425Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000056"
+              ],
+              "summary": "Probe probe-000056 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000056",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 4,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 7,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 11,
+            "trace_id": "probe-000056"
+          },
+          "observed_at": "2026-11-24T04:03:28.601+00:00",
+          "started_at": "2026-11-24T04:03:28.576+00:00"
+        },
+        {
+          "elapsed_ms": 80.653,
+          "event": {
+            "at": "2026-11-24T04:03:28.57237555Z",
+            "diagnosis": {
+              "class": "healthy",
+              "confidence": "high",
+              "evidence": [
+                "probe-000058"
+              ],
+              "summary": "Probe probe-000058 resolved DNS and received a successful upstream response."
+            },
+            "id": "probe-000058",
+            "outcome": "ok",
+            "release": "v1",
+            "spans": [
+              {
+                "detail": "172.21.0.2",
+                "duration_ms": 2,
+                "name": "dns.resolve",
+                "outcome": "ok"
+              },
+              {
+                "detail": "HTTP 200",
+                "duration_ms": 13,
+                "name": "http.upstream",
+                "outcome": "ok"
+              }
+            ],
+            "target": "api.lab.test",
+            "total_ms": 15,
+            "trace_id": "probe-000058"
+          },
+          "observed_at": "2026-11-24T04:03:28.607+00:00",
+          "started_at": "2026-11-24T04:03:28.575+00:00"
+        }
+      ]
+    }
+  ],
+  "started_at": "2026-11-24T04:03:25.541+00:00",
+  "status": "complete"
+}

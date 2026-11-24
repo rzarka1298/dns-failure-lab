@@ -1,0 +1,12 @@
+# TYPE lab_probes_total counter
+lab_probes_total{outcome="ok"} 24
+lab_probes_total{outcome="slow"} 8
+lab_probes_total{outcome="dns_timeout"} 9
+lab_probes_total{outcome="dns_error"} 8
+lab_probes_total{outcome="dns_no_answer"} 0
+lab_probes_total{outcome="connection_failed"} 16
+lab_probes_total{outcome="upstream_error"} 0
+# TYPE lab_probe_duration_seconds_sum counter
+lab_probe_duration_seconds_sum 9.634
+# TYPE lab_dns_duration_seconds_sum counter
+lab_dns_duration_seconds_sum 9.387
