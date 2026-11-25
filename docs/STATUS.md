@@ -1,6 +1,6 @@
 # Project status
 
-Updated 2026-11-24. This file is a handoff for future Codex sessions.
+Updated 2026-11-25. This file is a handoff for future Codex sessions.
 
 ## Built
 
@@ -17,11 +17,11 @@ Updated 2026-11-24. This file is a handoff for future Codex sessions.
 - `docker compose up --build --detach --wait` brought all three containers to healthy. A live smoke probe resolved the upstream container address and received HTTP 200. The first benchmark attempt failed after timeout-to-wrong-answer transition; its state and logs are in `artifacts/2026-11-23-baseline/`. Resetting the Go resolver on scenario transitions fixed the contamination. A direct timeout → wrong answer → stale answer → recovery check passed and is saved in `artifacts/2026-11-23-transition-check/`.
 - `python3 scripts/benchmark.py run --url http://127.0.0.1:8080 --samples 8 --concurrency 4 --output artifacts/2026-11-23-verified/benchmark-run.json` completed all seven stages. `python3 scripts/benchmark.py report artifacts/2026-11-23-verified/benchmark-run.json --output artifacts/2026-11-23-verified/benchmark-report.json` scored 56 returned probes: 40 TP, 16 TN, 0 FP, 0 FN; precision/recall 1.0; diagnosis 56/56 correct against held-back labels; citation coverage 1.0. Median stage detection time 39.214 ms (maximum 733.404 ms); observed recovery time 47.99 ms. These are one synthetic local run, not production reliability estimates.
 - A synthetic incident was approved through the API, the workbench container restarted, and the approved record with its evidence snapshot remained available. The before/after records are in `artifacts/2026-11-23-verified/`. Python scorer tests and UI JavaScript syntax check passed.
+- The repository is public at `https://github.com/rzarka1298/dns-failure-lab`. The first pushed GitHub Actions run (`45684635777`) passed the Go and hosted Compose end-to-end jobs, including the smoke and benchmark gates.
 
 ## Waiting on external environment
 
-1. AWS remains code-only by user choice. A live deployment would need an account and cost boundary, Route 53 zone and ACM certificates, OIDC roles, protected GitHub environments, and a deploy runner/operator with a narrow static egress CIDR. See `infra/README.md`. No AWS resources were created.
-2. GitHub Actions has not run because this local repository has no remote. The workflows include live Compose and benchmark gates, but their behavior on GitHub remains unverified.
+- AWS remains code-only by user choice. A live deployment would need an account and cost boundary, Route 53 zone and ACM certificates, OIDC roles, protected GitHub environments, and a deploy runner/operator with a narrow static egress CIDR. See `infra/README.md`. No AWS resources were created, and the manual release and rollback workflows have not been run.
 
 ## Remaining engineering work
 

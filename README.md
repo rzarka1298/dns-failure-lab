@@ -188,7 +188,7 @@ The [first measured local report](artifacts/2026-11-23-verified/benchmark-report
 
 ## Release pipeline and rollback
 
-`.github/workflows/test.yml` runs the Go race tests, Python scorer tests, and a Docker Compose end-to-end smoke and benchmark gate on a GitHub runner. The local tests and experiment were run on this host; the GitHub workflow has not run yet.
+`.github/workflows/test.yml` runs the Go race tests, Python scorer tests, and a Docker Compose end-to-end smoke and benchmark gate on a GitHub runner. The local tests and experiment ran on this host, and the [first GitHub CI run](https://github.com/rzarka1298/dns-failure-lab/actions/runs/45684635777) passed both jobs.
 
 `.github/workflows/release.yml` is a **manual, code-only AWS plan**: run checks, build a container image, push it to preview ECR, deploy an isolated preview ECS service, run smoke and benchmark gates, then optionally promote the tested image contents to a protected production environment. The deployments are pinned to image digests. `.github/workflows/rollback.yml` can redeploy a known-good digest and smoke test it. The preview and production templates use separate VPCs, services, load balancers, logs, and ECR repositories. HTTPS ingress is restricted to an operator CIDR because the fault controls have no application authentication.
 
